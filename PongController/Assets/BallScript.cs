@@ -5,23 +5,17 @@ using UnityEngine;
 public class BallScript : MonoBehaviour
 {
     public int initialRot;
+    private Quaternion rotation;
     public Vector2 startingSpeed;
-    public bool destroyed;
-    public GameManager gm;
-    public GameObject gameMaster;
     public Rigidbody2D rb;
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        gm = gameMaster.GetComponent<GameManager>();
         moveBall();
+        Random.seed = (int)System.DateTime.Now.Ticks;
     }
 
-    void Update()
-    {
-
-    }
     public void moveBall()
     {
         ChooseStart();
@@ -35,17 +29,9 @@ public class BallScript : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Win"))
-        {
-            destroyed = true;
-            Destroy(this.gameObject);
-        }
-    }
-
     void ChooseStart()
     {
-        initialRot = Random.Range(0,360);
+        initialRot = Random.Range(0,180);
+        this.gameObject.transform.rotation = new Quaternion(0, 0, initialRot, 0);
     }
 }

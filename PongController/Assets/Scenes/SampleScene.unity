@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 45262242}
   - component: {fileID: 45262241}
   - component: {fileID: 45262240}
+  - component: {fileID: 45262243}
   m_Layer: 0
   m_Name: WinBoxes
   m_TagString: Win
@@ -196,6 +197,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &45262243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45262239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a520191bccd4e34cbe7fe28e6fec9d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 3282382376481541937, guid: 6ec7227d2e66f2c47854d522b559fc73, type: 3}
+  startPosition: {x: 0, y: 0, z: 0}
+  bs: {fileID: 3282382376481541938, guid: 6ec7227d2e66f2c47854d522b559fc73, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +512,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5301485089570170943}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1621470184 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3282382376481541938, guid: 6ec7227d2e66f2c47854d522b559fc73,
+    type: 3}
+  m_PrefabInstance: {fileID: 3282382376641350737}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b9c12a35616eb4cb98d28b3bd8bdd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1772659451
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,5 +764,10 @@ PrefabInstance:
       propertyPath: destroyed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5301485090510834903, guid: 158fda9c14b91994d80bd24cab07767a,
+        type: 3}
+      propertyPath: bs
+      value: 
+      objectReference: {fileID: 1621470184}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 158fda9c14b91994d80bd24cab07767a, type: 3}

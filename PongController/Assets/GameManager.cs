@@ -6,28 +6,28 @@ public class GameManager : MonoBehaviour
 {
     public GameObject ball;
     public Vector3 startPosition;
-    public bool destroyed;
     public BallScript bs;
+    private bool ballDestroyed = false;
 
     void Start()
     {
         bs = ball.GetComponent<BallScript>();
-        
+        startPosition = ball.transform.position;
     }
 
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        Destroy(other.gameObject);
+        ballDestroyed = true;
         spawnBall();
     }
 
     void spawnBall()
     {
-        if (bs.destroyed)
+        if (ballDestroyed == true)
         {
-            Instantiate(ball, startPosition, Quaternion.identity);
-            bs.rb = ball.GetComponent<Rigidbody2D>();
+            Instantiate(ball, startPosition,Quaternion.identity);
             bs.moveBall();
-            bs.destroyed = false;
         }
     }
 
