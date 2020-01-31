@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public GameObject ball;
     public Vector3 startPosition;
     public BallScript bs;
-    private bool ballDestroyed = false;
+    public  bool ballDestroyed = false;
 
     void Start()
     {
