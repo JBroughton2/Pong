@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
         spawnBall();
     }
 
+
     void spawnBall()
     {
         if (ballDestroyed == true)

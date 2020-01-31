@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b9c12a35616eb4cb98d28b3bd8bdd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialRot: 105
+  initialRot: 57
   startingSpeed: {x: 250, y: 250}
   rb: {fileID: 3282382376481541936}
 --- !u!58 &3282382376481541939
